@@ -538,6 +538,8 @@
 
 <canvas id="petals" aria-hidden="true"></canvas>
 
+<div id="music-embed-wrap"></div>
+
 <div id="book-overlay">
   <p class="book-eyebrow">Mis XV años · Grecia</p>
   <div class="book-wrap">
@@ -737,7 +739,7 @@
       if(musicWrap && !musicWrap.dataset.loaded){
         musicWrap.dataset.loaded = '1';
         var iframe = document.createElement('iframe');
-        iframe.src = 'https://open.spotify.com/embed/track/1r6jjBkaAjGp09h2R6heZp?utm_source=generator&autoplay=1';
+        iframe.src = 'https://open.spotify.com/embed/track/1r6jjBkaAjGp09h2R6heZp?utm_source=generator&autoplay=1&autoplay=true';
         iframe.width = '100%';
         iframe.height = '80';
         iframe.style.border = '0';
