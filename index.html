@@ -615,8 +615,8 @@
             <input id="f-name" type="text" required autocomplete="name">
           </div>
           <div class="field">
-            <label for="f-email">Celular *</label>
-            <input id="f-email" type="email" required autocomplete="email">
+            <label for="f-phone">Número de celular *</label>
+            <input id="f-phone" type="tel" required autocomplete="tel" placeholder="987 654 321">
           </div>
         </div>
         <div class="field" id="field-guest">
@@ -795,17 +795,17 @@
   btnYes.addEventListener('click', function(){ setAttending(true); });
   btnNo.addEventListener('click', function(){ setAttending(false); });
 
-  var rsvpForm = document.getElementById('rsvp-form');
+    var rsvpForm = document.getElementById('rsvp-form');
   var rsvpConfirm = document.getElementById('rsvp-confirm');
   var rsvpConfirmName = document.getElementById('rsvp-confirm-name');
 
-  // TODO: reemplazar con el número real cuando lo tengas, formato internacional sin '+' ni espacios (ej: 51987654321)
+  // Número de WhatsApp que recibe las confirmaciones (formato internacional, sin '+' ni espacios)
   var WHATSAPP_NUMBER = '51908988394';
 
   rsvpForm.addEventListener('submit', function(ev){
     ev.preventDefault();
     var name = document.getElementById('f-name').value.trim() || 'invitado';
-    var email = document.getElementById('f-phone').value.trim();
+    var phone = document.getElementById('f-phone').value.trim();
     var guest = document.getElementById('f-guest').value === 'si' ? 'Sí, con un acompañante' : 'No, voy solo/a';
     var allergy = document.getElementById('f-allergy').value.trim() || 'Ninguna';
     var note = document.getElementById('f-note').value.trim() || '—';
