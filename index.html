@@ -800,12 +800,12 @@
   var rsvpConfirmName = document.getElementById('rsvp-confirm-name');
 
   // TODO: reemplazar con el número real cuando lo tengas, formato internacional sin '+' ni espacios (ej: 51987654321)
-  var WHATSAPP_NUMBER = '';
+  var WHATSAPP_NUMBER = '51908988394';
 
   rsvpForm.addEventListener('submit', function(ev){
     ev.preventDefault();
     var name = document.getElementById('f-name').value.trim() || 'invitado';
-    var email = document.getElementById('f-email').value.trim();
+    var email = document.getElementById('f-phone').value.trim();
     var guest = document.getElementById('f-guest').value === 'si' ? 'Sí, con un acompañante' : 'No, voy solo/a';
     var allergy = document.getElementById('f-allergy').value.trim() || 'Ninguna';
     var note = document.getElementById('f-note').value.trim() || '—';
@@ -818,7 +818,7 @@
       'Asistencia: ' + asiste
     ];
     if (attending) {
-      lines.push('Correo: ' + email);
+      lines.push('Celular: ' + phone);
       lines.push('Acompañante: ' + guest);
       lines.push('Alergias/intolerancias: ' + allergy);
     }
@@ -837,7 +837,7 @@
   var musicForm = document.getElementById('music-form');
   var musicInput = document.getElementById('music-input');
   var musicList = document.getElementById('music-list');
-  var songs = ['Grupo 5 – Vuela más alto', 'Bad Bunny – Titi me preguntó'];
+  var songs = ['Tiempo de Vals – Chayanne', 'Mi Princesa – David Bisbal'];
   function renderSongs(){
     musicList.innerHTML = '';
     songs.forEach(function(s){
